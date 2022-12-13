@@ -1,5 +1,6 @@
 <div class="header">
     <input type="text"
+           placeholder="Escribe una pregunta..."
            (keyup)="this.onchange()"
            [(ngModel)]="question.value">
     <button class="btn btn-negative"
@@ -11,6 +12,7 @@
     <div *ngFor="let a of question.answers; let i = index"
          class="answer">
         <input type="text"
+               placeholder="Escribe una respuesta..."
                (keyup)="answerValueChange($event, i)"
                (focusout)="answerFocusOut($event, i)"
                [(ngModel)]="a.value">
