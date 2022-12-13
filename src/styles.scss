@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    h1, h2, h3, h4, h5, p { margin: 0; }
+
+    .btn {
+        flex-shrink: 0;
+        background-color: transparent;
+        border: none; outline: none;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: all .2s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.btn-negative {
+            background-color: tomato;
+            color: white;
+        }
+
+        &.btn-positive {
+            background-color: rgb(49, 191, 234);
+            color: white;
+        }
+    }
+}

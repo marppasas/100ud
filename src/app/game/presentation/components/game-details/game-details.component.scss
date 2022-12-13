@@ -1,0 +1,78 @@
+@import '../../../../../fonts.scss';
+
+main {
+    padding: 16px 0;
+    width: 800px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .card {
+        background-color: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    #header {
+        padding: 24px;
+
+        h1 {
+            font-size: 40px;
+            font-family: $font-title;
+        }
+    }
+
+    #body {
+        margin-top: 16px;
+
+        .answer {
+            padding: 16px;
+            font-size: 32px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform .2s ease;
+
+            p {
+                opacity: 0;
+                user-select: none;
+                transition: opacity 1s;
+                font-family: $font-paragraph;
+            }
+
+            &:not(.show) {
+                cursor: pointer;
+                &:hover { transform: scale(1.025); }
+            }
+
+            &::after {
+                content: '';
+                background: linear-gradient(45deg, darkviolet, violet);
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                transition: opacity 1s;
+            }
+
+            &.show {
+                p { opacity: 1; }
+                &::after { opacity: 0; }
+            }
+
+            &:not(:last-child) { margin-bottom: 16px; }
+        }
+    }
+
+    #controls {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+            font-size: 18px;
+
+            &:disabled { pointer-events: none; }
+        }
+    }
+}

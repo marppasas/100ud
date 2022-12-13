@@ -1,0 +1,28 @@
+<main>
+    <app-back-bar></app-back-bar>
+    <div id="container">
+        <div id="header"
+             class="card">
+            <h1>{{ question.value }}</h1>
+        </div>
+        <div id="body">
+            <div *ngFor="let a of question.answers"
+                 class="answer card"
+                 (click)="clickAnswer($event)">
+                <p>{{ a.value }}</p>
+            </div>
+        </div>
+        <div id="controls">
+            <button class="btn"
+                    (click)="prevQuestion()"
+                    [disabled]="currentQuestionIdx == 0">
+                Anterior
+            </button>
+            <button class="btn"
+                    (click)="nextQuestion()"
+                    [disabled]="currentQuestionIdx == questions.length - 1">
+                Siguiente
+            </button>
+        </div>
+    </div>
+</main>

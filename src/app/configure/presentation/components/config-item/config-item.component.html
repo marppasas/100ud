@@ -1,0 +1,17 @@
+<div class="header">
+    <input type="text"
+           [(ngModel)]="question.value">
+    <button class="btn btn-negative"
+            (click)="deleteQuestion()">
+        Eliminar
+    </button>
+</div>
+<div class="body">
+    <div *ngFor="let a of question.answers; let i = index"
+         class="answer">
+        <input type="text"
+               (keyup)="answerValueChange($event, i)"
+               (focusout)="answerFocusOut($event, i)"
+               [(ngModel)]="a.value">
+    </div>
+</div>

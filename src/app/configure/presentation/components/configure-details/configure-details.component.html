@@ -1,0 +1,46 @@
+<main>
+    <app-back-bar></app-back-bar>
+    <div id="container">
+        <div *ngFor="let q of questions; let i = index"
+             class="question">
+            <app-config-item [question]="q"
+                             (onClickDelete)="deleteQuestion(i)"
+                             (onChange)="questionChanged()">
+            </app-config-item>
+        </div>
+    </div>
+    <div id="new-question-container">
+        <button class="btn"
+                (click)="addQuestion()">
+            Agregar pregunta
+        </button>
+    </div>
+    <div id="controls">
+        <div class="card-btn"
+             (click)="save()"
+             [ngClass]="questions.length == 0 ? 'disabled' : ''">
+            <img src="../../../../../assets/icons/save.png">
+            <h2>Guardar</h2>
+        </div>
+        <div class="card-btn"
+             (click)="export()">
+            <img src="../../../../../assets/icons/download.png">
+            <h2>Exportar</h2>
+        </div>
+        <div class="card-btn"
+             (click)="import()">
+            <img src="../../../../../assets/icons/import.png">
+            <h2>Cargar</h2>
+        </div>
+        <div class="card-btn"
+             (click)="clear()"
+             [ngClass]="questions.length == 0 ? 'disabled' : ''">
+            <img src="../../../../../assets/icons/delete.png">
+            <h2>Limpiar</h2>
+        </div>
+    </div>
+    <div *ngIf="unsavedConfig"
+         id="unsaved-container">
+        <p>Tenés cambios sin guardar...</p>
+    </div>
+</main>
