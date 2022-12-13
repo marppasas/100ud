@@ -24,8 +24,9 @@ Lastly, you can navigate through the questions by the controls you have below th
 
 ## Installation
 
-Please, make sure you have both Node.js and Angular-CLI installed.
 Just clone it and run ```ng serve -o```.
+You would need to install packages by running ```npm i```.
+Please, make sure you have both Node.js and Angular-CLI installed.
 
 ## Demo
 
