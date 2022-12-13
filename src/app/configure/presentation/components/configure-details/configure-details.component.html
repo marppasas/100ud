@@ -23,7 +23,8 @@
             <h2>Guardar</h2>
         </div>
         <div class="card-btn"
-             (click)="export()">
+             (click)="export()"
+             [ngClass]="canExport ? '' : 'disabled'">
             <img src="./assets/icons/download.png">
             <h2>Exportar</h2>
         </div>

@@ -16,6 +16,8 @@ export class ConfigureDetailsComponent implements OnInit {
         private configService: ConfigService
     ) {}
 
+    public get canExport(): boolean { return this.questions.filter(t => t.value.trim().length && t.answers.filter(x => x.value.trim().length).length).length > 0; }
+
     public ngOnInit(): void {
         this.questions = this.configService.load();
         for (let q of this.questions) {
@@ -51,7 +53,7 @@ export class ConfigureDetailsComponent implements OnInit {
     }
 
     public export(): void {
-        if (this.questions.length) {
+        if (this.canExport) {
             this.configService.export(this.questions);
         }
     }
