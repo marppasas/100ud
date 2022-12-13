@@ -1,27 +1,32 @@
-# Juli
+# 100 Uruguayos Dicen
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+My sister, who is a teacher, asked me to help her with one of her activities. She wanted to play with her students a tv game.
 
-## Development server
+100 Uruguayos Dicen is a game which is based on 100 Argentinos Dicen TV show.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The instructions to play are really easy. You will need at least 3 people: one host and two participants. The host would be the one that prepares the questions and its answers, and shows them to the participants. The idea is that the answers are hidden and both players have to guess all the cards. The participant that guesses more answers win.
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Once you open the page, you will see two buttons: _Jugar_ and _Configurar_. The first one would be disabled as you don't have any questions preparedujm . So the first step is to go to the configuration page and add the first question by pressing the _"Agregar pregunta"_ button.
 
-## Build
+A new card will be added, where you can set the question value and the first answer. As you write the answer, a new input would be added. If you want to remove an answer, please leave the input empty. Also you can remove the entire question by pressing the _"Eliminar"_ button next to the question value.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Below the questions box, you will see 4 control buttons:
+1. **_Guardar_**: Save your configuration into the browser storage.
+2. **_Exportar_**: Export your configuration into a json file.
+3. **_Cargar_**: Import a json file with the configuration you save by clicking the previous button.
+4. **_Limpiar_**: Clear all questions and their answers.
 
-## Running unit tests
+Once you finished setting the game, you can go back to the home screen by clicking the arrow in the very top of the page and click _"Jugar"_. You will see the first question and its hidden answers. When a player says a word or phrase which is fairly equal to one of the answers, you can click it and the text will be revealed.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Lastly, you can navigate through the questions by the controls you have below the answers: _Anterior_ and _Siguiente_.
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Please, make sure you have both Node.js and Angular-CLI installed.
+Just clone it and run ```ng serve -o```.
 
-## Further help
+## Demo
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You can see a demo in [nicoovillarr.github.io](https://nicoovillarr.github.io).
