@@ -8,7 +8,7 @@ The instructions to play are really easy. You will need at least 3 people: one h
 
 ## Usage
 
-Once you open the page, you will see two buttons: _Jugar_ and _Configurar_. The first one would be disabled as you don't have any questions preparedujm . So the first step is to go to the configuration page and add the first question by pressing the _"Agregar pregunta"_ button.
+Once you open the page, you will see two buttons: _Jugar_ and _Configurar_. The first one would be disabled as you don't have any questions prepared. So the first step is to go to the configuration page and add the first question by pressing the _"Agregar pregunta"_ button.
 
 A new card will be added, where you can set the question value and the first answer. As you write the answer, a new input would be added. If you want to remove an answer, please leave the input empty. Also you can remove the entire question by pressing the _"Eliminar"_ button next to the question value.
 
