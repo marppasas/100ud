@@ -17,11 +17,8 @@ export class ConfigService {
     }
 
     public load(): IQuestion[] {
-        console.assert(this.hasConfig());
-
-        let questions: IQuestion[] = [];
-        questions = JSON.parse(this.getJson()!);
-        return questions;
+        let questions: IQuestion[] = JSON.parse(this.getJson()!);
+        return questions ?? [];
     }
 
     public export(p: IQuestion[]): void {
