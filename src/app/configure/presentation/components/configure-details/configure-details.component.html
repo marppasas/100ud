@@ -18,7 +18,7 @@
     <div id="controls">
         <div class="card-btn"
              (click)="save()"
-             [ngClass]="questions.length == 0 ? 'disabled' : ''">
+             [ngClass]="unsavedConfig ? '' : 'disabled'">
             <img src="./assets/icons/save.png">
             <h2>Guardar</h2>
         </div>
