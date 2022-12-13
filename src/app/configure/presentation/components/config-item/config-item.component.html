@@ -1,5 +1,6 @@
 <div class="header">
     <input type="text"
+           (keyup)="this.onchange()"
            [(ngModel)]="question.value">
     <button class="btn btn-negative"
             (click)="deleteQuestion()">

@@ -35,7 +35,7 @@ export class ConfigItemComponent implements OnInit {
         if (input.value.length && i == this.question.answers.length - 1) {
             this.addAnswer();
         }
-        this.onChange.emit();
+        this.onchange();
     }
 
     public answerFocusOut(e: FocusEvent, i: number): void {
@@ -43,6 +43,10 @@ export class ConfigItemComponent implements OnInit {
         if (!input.value.length && i < this.question.answers.length - 1) {
             this.removeAnswer(i);
         }
+    }
+
+    public onchange(): void {
+        this.onChange.emit();
     }
 
 }
